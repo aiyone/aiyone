@@ -1,0 +1,36 @@
+[tool.ruff]
+line-length = 119
+extend-exclude = ["tests/*", "docs/*"]
+target-version = "py312"
+
+[tool.ruff.lint]
+preview = true
+explicit-preview-rules = true
+extend-select = [
+    "C",
+    "E",
+    "F",
+    "W",
+    "B",
+    "T",
+    "D",
+    "R",
+    "C8",
+    "UP"
+    "W
+    "PT009",
+    "RUF022"
+]
+ignore = [
+    "C901", # Function too complex
+    "E501", # Line length (handled by ruff-format)
+    "F841", # unused variable
+    "UP007", # X | Y style Unions
+]
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
+
+[tool.black] 
+line-length = 119
+target-version = ['py312']
